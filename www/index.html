@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <title>Hello World</title>
+    </head>
+    <body>
+        <div class="app">
+            <h1>Apache Cordova</h1>
+            <div id="deviceready" class="blink">
+                <p class="event listening">Connecting to Device</p>
+                <p class="event received">Device is Ready</p>
+            </div>
+            <div id="offline">
+                <p class="event listening">Device is OFFLINE</p>
+                <p class="event received">Device is ONLINE</p>
+            </div>
+
+            <h2>cordova-plugin-dialogs</h2>
+            <ul style="list-style: none;padding:0">
+                <li><a href="#" id="link-alert">Launch alert</a></li>
+                <li><a href="#" id="link-confirm">Launch confirm</a></li>
+                <li><a href="#" id="link-prompt">Launch prompt</a></li>
+                <li><a href="#" id="link-beep">Launch beep</a></li>
+            </ul>
+
+            <h2>cordova-plugin-geolocation</h2>
+            <ul style="list-style: none;padding:0">
+                <li><a href="#" id="link-request-geolocation">Request geolocation (result in console)</a></li>
+            </ul>
+
+            <h2>cordova-plugin-sim</h2>
+            <ul style="list-style: none;padding:0">
+                <li><a href="#" id="link-request-sim">Request sim (result in console)</a></li>
+            </ul>
+
+            <h2>cordova-plugin-customurlscheme</h2>
+            <ul style="list-style: none;padding:0">
+                <li><a href="http://test.rseon.com/scheme.php?from=browser" id="link-test-scheme">Open page in system browser</a></li>
+            </ul>
+
+            <h2>cordova-plugin-inappbrowser</h2>
+            <ul style="list-style: none;padding:0">
+                <li><a href="http://test.rseon.com/scheme.php?from=inapp" id="link-test-scheme-inapp">Open page in-app browser</a></li>
+            </ul>
+
+            <h2>cordova-plugin-contacts</h2>
+            <ul style="list-style: none;padding:0">
+                <li><a href="#" id="link-test-contact">Retrieve contacts (result in console)</a></li>
+                <li><a href="#" id="link-test-pick-contact">Pick a contact (result in console)</a></li>
+            </ul>
+
+            <h2>cordova-plugin-camera</h2>
+            <ul style="list-style: none;padding:0">
+                <li><a href="#" id="link-camera-getpicture">Get picture from camera</a></li>
+                <li><a href="#" id="link-camera-getpicture-device">Get picture from gallery</a></li>
+            </ul>
+
+            <p>Image result :</p>
+            <img id="imageFile" />
+
+            <h2>cordova-plugin-actionsheet</h2>
+            <ul style="list-style: none;padding:0">
+                <li><a href="#" id="link-actionsheet-share">Open action sheet (share)</a></li>
+                <li><a href="#" id="link-actionsheet-delete">Open action sheet (delete)</a></li>
+                <li><a href="#" id="link-actionsheet-logout">Open action sheet (logout)</a></li>
+            </ul>
+
+            <h2>cordova-plugin-spinner-dialog</h2>
+            <ul style="list-style: none;padding:0">
+                <li><a href="#" id="link-spinner">Open spinner</a></li>
+                <li><a href="#" id="link-spinner-blank">Open spinner without messages</a></li>
+            </ul>
+
+            <h2>cordova-plugin-local-notification</h2>
+            <ul style="list-style: none;padding:0">
+                <li><a href="#" id="link-notification">Launch notification</a></li>
+            </ul>
+
+        </div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+    </body>
+</html>
